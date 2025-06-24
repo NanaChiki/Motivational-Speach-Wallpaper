@@ -1,3 +1,22 @@
-.inner-box {
-  height: 600px;
+.vh-75 {
+  height: 75vh !important;
+}
+
+.image-Background {
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.paperText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.02;
+  line-height: 1.5;
+}
+
+@media (min-width: 992px) {
+  .paperText {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
 }
