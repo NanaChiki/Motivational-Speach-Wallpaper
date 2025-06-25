@@ -8,12 +8,37 @@
   <link rel='stylesheet' href='./style.css'>
 </head>
 <body>
+  <!-- ① Wallpaper Section -->
   <div id="main-wrapper">
   </div>
+
+  <!-- ② Buttons to navigate wallpapers -->
   <div class="d-flex justify-content-center mb-5">
-    <!-- <button id="change-wallpaper" class="btn btn-primary p-3">Show Random Wallpaper</button> -->
+    <!-- <button id="change-wallpaper" class="btn btn-primary p-3">Show Random Wallpaper</button> -->    
     <button id="previous-wallpaper" class="btn btn-secondary mx-3 p-3 btn-wallpaper">Previous</button>
     <button id="next-wallpaper" class="btn btn-primary mx-3 p-3 btn-wallpaper">Next</button>
+  </div>
+
+  <!-- ③ Submit a new motivational wallpaper -->
+  <div class="mb-5">
+   <form id="submit-new-quote" class="container d-flex justify-content-center flex-column align-items-center">
+     <h2 class="text-center">Submit a New Motivational Wallpaper!</h2>
+     <div class="col-8 mt-3">
+        <label for="quote-input" class="form-label">Enter a new motivational quote:</label>
+        <input type="text" id="quote-input" class="form-control" placeholder="Enter your quote here" required>
+      </div>
+      <div class="col-8 mt-2">        
+        <label for="background-image-input" class="form-label mt-2" >Enter background image URL:</label>
+        <input type="text" id="background-image-input" class="form-control" placeholder='e.g., https://example.com/image.jpg' required>
+      </div>
+      <div class="col-8 mt-2">
+        <label for="text-color-input" class="form-label mt-2">Enter text color (hex code):</label>
+        <input type="text" id="text-color-input" class="form-control" placeholder="e.g., FFFFFF">
+      </div>
+      <div class="col-12 mt-3 d-flex justify-content-center">
+        <button type="submit" class="btn btn-success">Add a new wallpaper</button>
+      </div>
+    </form>
   </div>
   <script src='./main.js'></script>
 </body>
