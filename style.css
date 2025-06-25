@@ -21,6 +21,13 @@
   }
 }
 
-#change-wallpaper {
+/* #change-wallpaper {
+  border-radius: 30px;
+} */
+
+.btn-wallpaper {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 22%;
   border-radius: 30px;
 }

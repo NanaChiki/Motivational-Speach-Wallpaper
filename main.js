@@ -55,10 +55,31 @@ const wallpapers = [
   ).createWallpaper()
 ];
 
-mainElement.append(wallpapers[0]);
+// Change to a random wallpaper when the button is clicked
+// document.getElementById('change-wallpaper').addEventListener('click', () => {
+//   mainElement.innerHTML = ''; // Clear the main wrapper when the button is clicked
+//   const randomIndex = Math.floor(Math.random() * wallpapers.length);
+//   mainElement.append(wallpapers[randomIndex]); // Append a random wallpaper
+// });
 
-document.getElementById('change-wallpaper').addEventListener('click', () => {
-  mainElement.innerHTML = ''; // Clear the main wrapper when the button is clicked
-  const randomIndex = Math.floor(Math.random() * wallpapers.length);
-  mainElement.append(wallpapers[randomIndex]); // Append a random wallpaper
+///////////// Functionality to navigate through wallpapers using next and previous buttons ////////////////
+let currentIndex = 0;
+function showWallpaper(index) {
+  mainElement.innerHTML = ''; // Clear the main wrapper
+  mainElement.append(wallpapers[index]); // Append the wallpaper at the given index
+}
+
+showWallpaper(currentIndex); // Show the initial Wallpaper
+
+document.getElementById('next-wallpaper').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % wallpapers.length; // Increment index and wrap around
+  showWallpaper(currentIndex); // Show the next wallpaper
 });
+
+document.getElementById('previous-wallpaper').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + wallpapers.length) % wallpapers.length; // Decrement index and wrap around
+  showWallpaper(currentIndex); // Show the previous Wallpaper
+});
+
+
+
